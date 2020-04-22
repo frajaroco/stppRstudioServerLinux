@@ -13,9 +13,8 @@ install.packages('devtools')
 and thereafter run the commands:
 ```
 require(devtools)
-install_github('stpp-GitHub-community/stppRstudioServerLinux')
+install_github('frajaroco/stppRstudioServerLinux')
 ```
-Ubuntu users can follow the instructions in this discussion on stackoverflow to avoid complexity in installing some of the packages, particularly [rgdal](https://stackoverflow.com/questions/44382368/rgdal-installation-difficulty-on-ubuntu-16-04-lts) and [rgl](https://stackoverflow.com/questions/31820865/error-in-installing-rgl-package).
 
 ## References
 
