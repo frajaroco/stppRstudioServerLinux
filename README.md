@@ -4,15 +4,17 @@ Many of the models encountered in applications of point process methods to the s
 
 ## This is the development version
 
+This version does not include some functions for the visualization and animation of the spatio-temporal point patterns, as well as the libraries 'rpanel', 'rgl' and their dependencies. 
+
 **Installation guide**
 
 The easiest way to install the development version of `stppRstudioServerLinux` from GitHub is using the `devtools` package which can be installed run the next command:
 ```
-install.packages('devtools')
+install.packages('remotes')
 ```
 and thereafter run the commands:
 ```
-require(devtools)
+require(remotes)
 install_github('frajaroco/stppRstudioServerLinux')
 ```
 
