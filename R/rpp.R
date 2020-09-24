@@ -52,7 +52,22 @@
     if (missing(s.region)) s.region <- matrix(c(0,0,1,1,0,1,1,0),ncol=2)
     if (missing(t.region)) t.region <- c(0,1)
     
-    s.area <- areapl(s.region)
+  xp <- s.region[,1]
+  yp <- s.region[,2]
+  nedges <- length(xp)
+  yp <- yp - min(yp) 
+  nxt <- c(2:nedges, 1)
+  dx <- xp[nxt] - xp
+  ym <- (yp + yp[nxt])/2
+  Areaxy <- -sum(dx * ym)
+  
+  if (Areaxy > 0){
+    bdry <- owin(poly = list(x = s.region[,1], y = s.region[,2]))
+  }else{
+    bdry <- owin(poly = list(x = s.region[,1][length(s.region[,1]):1], y = s.region[,2][length(s.region[,1]):1]))
+  }
+
+    s.area <- area(bdry)
     t.region <- sort(t.region)
     t.area <- t.region[2]-t.region[1]
 
@@ -113,8 +128,23 @@
 {
   if (missing(s.region)) s.region <- matrix(c(0,0,1,1,0,1,1,0),ncol=2)
   if (missing(t.region)) t.region <- c(0,1)
+	  
+  xp <- s.region[,1]
+  yp <- s.region[,2]
+  nedges <- length(xp)
+  yp <- yp - min(yp) 
+  nxt <- c(2:nedges, 1)
+  dx <- xp[nxt] - xp
+  ym <- (yp + yp[nxt])/2
+  Areaxy <- -sum(dx * ym)
+  
+  if (Areaxy > 0){
+    bdry <- owin(poly = list(x = s.region[,1], y = s.region[,2]))
+  }else{
+    bdry <- owin(poly = list(x = s.region[,1][length(s.region[,1]):1], y = s.region[,2][length(s.region[,1]):1]))
+  }
 
-  s.area <- areapl(s.region)
+  s.area <- area(bdry)
   t.region <- sort(t.region)
   t.area <- t.region[2]-t.region[1]
 
@@ -309,7 +339,6 @@
         tt <- floor(TT[samp] + runif(npoints, -t.grid$tinc/2, t.grid$tinc/2))
       else
         tt <- TT[samp] + runif(npoints, -t.grid$tinc/2, t.grid$tinc/2)
-    
       
       xyt.init=cbind(x=xx,y=yy,t=tt)
       
@@ -359,7 +388,22 @@ rpp <- function(lambda, s.region, t.region, npoints=NULL, nsim=1, replace=TRUE, 
   if (missing(s.region)) s.region <- matrix(c(0,0,1,1,0,1,1,0),ncol=2)
   if (missing(t.region)) t.region <- c(0,1)
 
-  s.area <- areapl(s.region)
+  xp <- s.region[,1]
+  yp <- s.region[,2]
+  nedges <- length(xp)
+  yp <- yp - min(yp) 
+  nxt <- c(2:nedges, 1)
+  dx <- xp[nxt] - xp
+  ym <- (yp + yp[nxt])/2
+  Areaxy <- -sum(dx * ym)
+  
+  if (Areaxy > 0){
+    bdry <- owin(poly = list(x = s.region[,1], y = s.region[,2]))
+  }else{
+    bdry <- owin(poly = list(x = s.region[,1][length(s.region[,1]):1], y = s.region[,2][length(s.region[,1]):1]))
+  }
+	
+  s.area <- area(bdry)
   t.region <- sort(t.region)
   t.area <- t.region[2]-t.region[1]
 
@@ -474,6 +518,3 @@ rpp <- function(lambda, s.region, t.region, npoints=NULL, nsim=1, replace=TRUE, 
   
   invisible(return(list(xyt=pattern,s.region=s.region,t.region=t.region,lambda=lambda,Lambda=Lambda)))
 }
-
-
-
