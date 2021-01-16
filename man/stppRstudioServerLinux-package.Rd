@@ -52,6 +52,10 @@ Following is a summary of the main functions and the dataset in the \code{stppRs
 \item \code{\link{KLISTAhat}}: space-time inhomogeneous K LISTA functions.
 \item \code{\link{gsp}}: spatial mark variogram function.
 \item \code{\link{gte}}: Temporal mark variogram function.
+\item \code{\link{kmr}}: Spatial r-mark function
+\item \code{\link{kmt}}: Temporal t-mark function.
+\item \code{\link{kmmr}}: Spatial mark correlation functionn.
+\item \code{\link{kmmt}}: Temporal mark correlation function.
 }
 
 \emph{Dataset}

@@ -19,6 +19,10 @@ export("sthpcpp")
 export("STIKhat")
 export("gsp")
 export("gte")
+export("kmr")
+export("kmt")
+export("kmmr")
+export("kmmt")
 
 import(splancs)
 
