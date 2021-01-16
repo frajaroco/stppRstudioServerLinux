@@ -61,27 +61,15 @@ Edith Gabriel <edith.gabriel@inrae.fr> and Peter J Diggle.
 # ---------------------------
 hpp1 <- rpp(lambda=200,replace=FALSE)
 
-\donttest{stan(hpp1$xyt)}
-
 # fixed number of points, discrete time, with time repeat.
 data(northcumbria)
 hpp2 <- rpp(npoints=500, s.region=northcumbria, t.region=c(1,1000),
 discrete.time=TRUE)
 plot(hpp2$xyt, style="elegant")
-\donttest{
-polymap(northcumbria)
-animation(hpp2$xyt, s.region=hpp2$s.region, t.region=hpp2$t.region,
-runtime=10, add=TRUE)
-}
 
 \donttest{
 # Inhomogeneous Poisson process
 # -----------------------------
-
-# intensity defined by a function
-lbda1 = function(x,y,t,a){a*exp(-4*y) * exp(-2*t)}
-ipp1 = rpp(lambda=lbda1, npoints=400, a=3200/((1-exp(-4))*(1-exp(-2))))
-stan(ipp1$xyt)
 
 # intensity defined by a matrix
 data(fmd)
