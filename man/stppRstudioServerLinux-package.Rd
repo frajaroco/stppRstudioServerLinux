@@ -5,11 +5,12 @@
 
 \title{Space-Time Point Pattern simulation, visualisation and analysis}
 
-\description{ This package provides models of spatio-temporal point processes in a region \eqn{S\times T}{S x T} and statistical tools for analysing global and local second-order properties of such processes. It also includes static and dynamic (2D and 3D) plots. \code{stppRstudioServerLinux} is the first dedicated unified computational environment in the area of spatio-temporal point processes.
+\description{ This package provides models of spatio-temporal point processes in a region \eqn{S\times T}{S x T} and statistical tools for analysing global and local second-order properties of such processes. It also includes static and dynamic (2D and 3D) plots. \code{stpp} is the first dedicated unified computational environment in the area of spatio-temporal point processes.
 
-The \code{stppRstudioServerLinux} package depends upon some other packages:
+The \code{stpp} package depends upon some other packages:
 
 \code{splancs}: spatial and space-time point pattern analysis
+
 
 \code{KernSmooth}: functions for kernel smoothing for Wand & Jones (1995)
 
@@ -19,15 +20,17 @@ The \code{stppRstudioServerLinux} package depends upon some other packages:
 }
 
 \details{
-\code{stppRstudioServerLinux} is a package for simulating, analysing and visualising patterns of points in space and time.
+\code{stpp} is a package for simulating, analysing and visualising patterns of points in space and time.
 
-Following is a summary of the main functions and the dataset in the \code{stppRstudioServerLinux} package.
+Following is a summary of the main functions and the dataset in the \code{stpp} package.
 
 \emph{To visualise a spatio-temporal point pattern}
 
 \itemize{
+\item \code{\link{animation}}: space-time data animation.
 \item \code{\link{as.3dpoints}}: create data in spatio-temporal point format.
 \item \code{\link{plot.stpp}}: plot spatio-temporal point object. Either a two-panels plot showing spatial locations and cumulative times, or a one-panel plot showing spatial locations with times treated as a quantitative mark attached to each location.
+\item \code{\link{stan}}: 3D space-time animation.
 }
 
 \emph{To simulate spatio-temporal point patterns}
@@ -50,7 +53,7 @@ Following is a summary of the main functions and the dataset in the \code{stppRs
 \item \code{\link{ASTIKhat}}: Anisotropic space-time inhomogeneous K-function,
 \item \code{\link{LISTAhat}}: space-time inhomogeneous pair correlation LISTA funcrions.
 \item \code{\link{KLISTAhat}}: space-time inhomogeneous K LISTA functions.
-\item \code{\link{gsp}}: spatial mark variogram function.
+\item \code{\link{gsp}}: Spatial mark variogram function.
 \item \code{\link{gte}}: Temporal mark variogram function.
 \item \code{\link{kmr}}: Spatial r-mark function
 \item \code{\link{kmt}}: Temporal t-mark function.
@@ -80,8 +83,8 @@ Gabriel E. (2014). Estimating second-order characteristics of inhomogeneous spat
 
 Gabriel E., Diggle P. (2009). Second-order analysis of inhomogeneous spatio-temporal point process data. Statistica Neerlandica, 63, 43--51.
 
-Gabriel E., Rowlingson B., Diggle P. (2013). stpp: an R package for plotting, simulating and analyzing
-Spatio-Temporal Point Patterns. Journal of Statistical Software,
+Gabriel E., Rowlingson B., Diggle P. (2013). stpp: an R package for plotting, simulating and analyzing 
+Spatio-Temporal Point Patterns. Journal of Statistical Software, 
 53(2), 1--29.
 
 Gneiting T. (2002). Nonseparable, stationary covariance functions for space-time data. Journal of the American Statistical Association, 97, 590--600.
