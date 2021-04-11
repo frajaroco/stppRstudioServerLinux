@@ -67,7 +67,7 @@ Edith Gabriel <edith.gabriel@inrae.fr>, Peter J Diggle.
 }
 
 \seealso{
- \code{\link{plot.stpp}}, \code{\link{animation}} and \code{\link{stan}} for plotting space-time point patterns.
+ \code{\link{plot.stpp}} for plotting space-time point patterns.
  }
 
 \examples{
@@ -77,10 +77,7 @@ data(northcumbria)
 pcp1 <- rpcp(nparents=50, npoints=500, s.region=northcumbria, 
 t.region=c(1,365), cluster=c("normal","exponential"), 
 maxrad=c(5000,5))
-\donttest{
-animation(pcp1$xyt, s.region=pcp1$s.region, t.region=pcp1$t.region,
-runtime=5)
-}
+
 # inhomogeneous Poisson distribution of parents
 
 lbda <- function(x,y,t,a){a*exp(-4*y) * exp(-2*t)}

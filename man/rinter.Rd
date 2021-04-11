@@ -59,7 +59,7 @@ Edith Gabriel <edith.gabriel@inrae.fr>, Peter J Diggle.
 }
 
 \seealso{
- \code{\link{plot.stpp}}, \code{\link{animation}} and \code{\link{stan}} for plotting space-time point patterns.
+ \code{\link{plot.stpp}} for plotting space-time point patterns.
  }
  
 \examples{
@@ -105,7 +105,7 @@ expression(h[t])),bty="n",cex=2)
 
 inh2 = rinter(npoints=100, hs=hs, gs="min", thetas=0.2, deltas=0.1, 
 ht=ht, gt="min", thetat=0.1, deltat=0.05, inhibition=TRUE)
-animation(inh2$xyt, runtime=15, cex=0.8)
+
 
 # simple contagious process for given spatial and temporal regions
 data(northcumbria)

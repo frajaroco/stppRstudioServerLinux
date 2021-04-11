@@ -45,7 +45,6 @@ Edith Gabriel <edith.gabriel@inrae.fr>
  \code{\link{rpp}}, \code{\link{rinfec}}, \code{\link{rinter}}, 
  \code{\link{rpcp}} and  \code{\link{rlgcp}} for the simulation of 
  Poisson, infectious, interaction, Poisson cluster and log-gaussian 
- Cox processes respectively; and \code{\link{plot.stpp}}, 
- \code{\link{animation}} and \code{\link{stan}} for plotting space-time 
+ Cox processes respectively; and \code{\link{plot.stpp}} for plotting space-time 
  point patterns. }
 

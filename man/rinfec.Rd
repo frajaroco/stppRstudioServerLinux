@@ -65,7 +65,7 @@ Edith Gabriel <edith.gabriel@inrae.fr>, Peter J Diggle.
 }
 
 \seealso{
- \code{\link{plot.stpp}}, \code{\link{animation}} and \code{\link{stan}} for plotting space-time point patterns.
+ \code{\link{plot.stpp}} for plotting space-time point patterns.
  }
  
 \examples{
@@ -89,7 +89,6 @@ t.distr="uniform", h="step", p="min", recent=1,
 lambda=Ls$z, inhibition=FALSE)
 
 image(Ls$x, Ls$y, Ls$z, col=grey((1000:1)/1000)); polygon(northcumbria,lwd=2)
-animation(inf2$xyt, add=TRUE, cex=0.7, runtime=15)
 }
 
 }

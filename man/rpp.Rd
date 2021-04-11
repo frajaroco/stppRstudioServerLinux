@@ -53,15 +53,13 @@ Edith Gabriel <edith.gabriel@inrae.fr> and Peter J Diggle.
 }
 
 \seealso{
- \code{\link{plot.stpp}}, \code{\link{animation}} and \code{\link{stan}} for plotting space-time point patterns.
+ \code{\link{plot.stpp}} for plotting space-time point patterns.
  }
 
 \examples{
 # Homogeneous Poisson process
 # ---------------------------
 hpp1 <- rpp(lambda=200,replace=FALSE)
-
-\donttest{stan(hpp1$xyt)}
 
 # fixed number of points, discrete time, with time repeat.
 data(northcumbria)
@@ -70,8 +68,6 @@ discrete.time=TRUE)
 plot(hpp2$xyt, style="elegant")
 \donttest{
 polymap(northcumbria)
-animation(hpp2$xyt, s.region=hpp2$s.region, t.region=hpp2$t.region, 
-runtime=10, add=TRUE)
 }
 
 \donttest{
@@ -81,7 +77,6 @@ runtime=10, add=TRUE)
 # intensity defined by a function
 lbda1 = function(x,y,t,a){a*exp(-4*y) * exp(-2*t)}
 ipp1 = rpp(lambda=lbda1, npoints=400, a=3200/((1-exp(-4))*(1-exp(-2))))
-stan(ipp1$xyt)
 
 # intensity defined by a matrix
 data(fmd)
@@ -97,6 +92,5 @@ discrete.time=TRUE)
            
 par(mfrow=c(1,1))
 image(Ls$x, Ls$y, Ls$z, col=grey((1000:1)/1000)); polygon(northcumbria)
-animation(ipp2$xyt, add=TRUE, cex=0.5, runtime=15)
 }
 }

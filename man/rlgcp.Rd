@@ -162,7 +162,7 @@ Edith Gabriel <edith.gabriel@inrae.fr>, Peter J Diggle.
 }
 
 \seealso{
- \code{\link{plot.stpp}}, \code{\link{animation}} and \code{\link{stan}} for plotting space-time point patterns.
+ \code{\link{plot.stpp}} for plotting space-time point patterns.
  }
 
 \examples{
@@ -173,7 +173,6 @@ model="gneiting", param=c(1,1,1,1,1,2), var.grf=1, mean.grf=0)
 N <- lgcp1$Lambda[,,1];for(j in 2:(dim(lgcp1$Lambda)[3])){N <-
 N+lgcp1$Lambda[,,j]}
 image(N,col=grey((1000:1)/1000));box()
-animation(lgcp1$xyt, cex=0.8, runtime=10, add=TRUE, prevalent="orange")
 
 # separable covariance function: 
 lgcp2 <- rlgcp(npoints=200, nx=50, ny=50, nt=50, separable=TRUE, 
@@ -181,8 +180,6 @@ model="exponential", param=c(1,1,1,1,1,2), var.grf=2, mean.grf=-0.5*2)
 N <- lgcp2$Lambda[,,1];for(j in 2:(dim(lgcp2$Lambda)[3])){N <-
 N+lgcp2$Lambda[,,j]}
 image(N,col=grey((1000:1)/1000));box()
-animation(lgcp2$xyt, cex=0.8, pch=20, runtime=10, add=TRUE,
-prevalent="orange")
 
 # anisotropic
 

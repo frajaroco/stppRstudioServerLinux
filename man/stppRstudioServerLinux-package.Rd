@@ -27,10 +27,8 @@ Following is a summary of the main functions and the dataset in the \code{stpp} 
 \emph{To visualise a spatio-temporal point pattern}
 
 \itemize{
-\item \code{\link{animation}}: space-time data animation.
 \item \code{\link{as.3dpoints}}: create data in spatio-temporal point format.
 \item \code{\link{plot.stpp}}: plot spatio-temporal point object. Either a two-panels plot showing spatial locations and cumulative times, or a one-panel plot showing spatial locations with times treated as a quantitative mark attached to each location.
-\item \code{\link{stan}}: 3D space-time animation.
 }
 
 \emph{To simulate spatio-temporal point patterns}
